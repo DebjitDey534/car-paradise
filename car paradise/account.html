@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+   <div class="profile"><img src="/pictures/profile image.png"></div>
+   <div class="button1"><button type="button" onclick="reset1()">Delete Account</button></div>
+   <div class="button2"><button type="button" onclick="reset()">Reset Bank Account</button></div>
+    <ul class="details">
+    <li type="none" id="item">NAME: <span id="name"></span> </li>
+    <li type="none" id="item">BANK BALANCE: <span id="bank"></span></li>
+    <li type="none" id="item">YOUR ACTIVITY:</li>
+   </ul>
+   <div class="purchased">Purchased:</div>
+   <ul><div id="what"></div></ul>
+   <div class="purchased">Sold:</div>
+   <ul><div id="sold"></div></ul>
+   <script>
+    let name=localStorage.getItem("name");
+    let b=localStorage.getItem("bank");
+     if((name==null)||(b==null))
+      {
+        name=prompt("Enter your name");
+      localStorage.setItem("name",name);
+      b=prompt("Enter your Bank Balance");
+      b=parseInt(b);
+      localStorage.setItem("bank",b);
+      localStorage.setItem("text","");
+      localStorage.setItem("image","");
+      localStorage.setItem("text1","");
+      let carnames=[];
+      let costs=[];
+      let images=[];
+      localStorage.setItem("cars",JSON.stringify(carnames));
+      localStorage.setItem("cost",JSON.stringify(costs));
+      localStorage.setItem("imagelinks",JSON.stringify(images));
+      localStorage.setItem("sellna",JSON.stringify(carnames));
+      localStorage.setItem("sellco",JSON.stringify(costs));
+      localStorage.setItem("sellim",JSON.stringify(images));
+      }
+    function reset1()
+    {
+      localStorage.clear();
+      alert("Account deleted. Reload to add new account");
+
+      
+    }
+    function reset()
+    {
+        localStorage.setItem("bank",null);
+        b=prompt("Enter your Bank Balance");
+        b=parseInt(b);
+        localStorage.setItem("bank",b);
+        location.reload();
+    }
+        document.getElementById("name").innerHTML=name.toUpperCase();
+        var b1 =b+" $";
+        document.getElementById("bank").innerHTML=b1;
+        let storedcarnames=JSON.parse(localStorage.getItem("cars"));
+        let storedcosts=JSON.parse(localStorage.getItem("cost"));
+        let soldstoredcarnames=JSON.parse(localStorage.getItem("sellna"));
+        let soldstoredcosts=JSON.parse(localStorage.getItem("sellco"));
+        let l=storedcarnames.length;
+        let l1=soldstoredcosts.length;
+        let text=""; 
+        let text1=""; 
+          for(let i=0;i<l;i++)
+          {
+            text+= "<li>bought " + storedcarnames[i]+ " worth "+storedcosts[i]+" $</li>";
+          }
+          for(let i=0;i<l;i++)
+          {
+            let f=0;
+            for(let j=0;j<l1;j++)
+            {
+              if(storedcosts[i]==soldstoredcosts[j])
+              {
+                f=f+1;
+                break;
+              }
+            }
+            if(f==0)
+            {
+              text1+= "<li>sold " + storedcarnames[i]+ " worth "+storedcosts[i]+" $</li>";
+            }
+          }
+        console.log(text1);
+        localStorage.setItem("text",text);
+        document.getElementById("what").innerHTML=text;
+        localStorage.setItem("text1",text1);
+        document.getElementById("sold").innerHTML=text1;
+   </script>
+</body>
+</html>
