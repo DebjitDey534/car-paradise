@@ -1,9 +1,3 @@
-
----
-
-### 3. **car‑paradise**
-
-```markdown
 # Car Paradise — Showcase Website
 
 A portfolio-style webpage showcasing cars with clean HTML layout.
