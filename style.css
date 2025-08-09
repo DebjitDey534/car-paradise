@@ -17,7 +17,7 @@ html{
 }
 .profile{
     position: absolute;
-    margin-left: 1180px;
+    right: 5%;
     margin-top: 20px;
 }
 .profile img{
@@ -33,6 +33,7 @@ html{
     display:flex;
     flex-direction: row;
     height:auto;
+    width: 88%;
     font-size: 20px;
 
 }
@@ -282,4 +283,5 @@ body{
         width: 600px;
     }
 }
+
 
