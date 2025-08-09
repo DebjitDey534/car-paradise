@@ -35,7 +35,6 @@ html{
     height:auto;
     width: 88%;
     font-size: 20px;
-
 }
 .navbar a:hover{
     border-radius: 20px;
@@ -79,7 +78,7 @@ padding:auto;
 }
 #home1 img{
     position: absolute;
-    width: 1330px;
+    width: 100%;
     height: 800px;
 }
  #hprimary{
@@ -283,5 +282,6 @@ body{
         width: 600px;
     }
 }
+
 
 
