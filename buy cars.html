@@ -52,36 +52,6 @@
         </section>
     </div>
     <div class="cas">
-        <!-- <h1 id="h2">MERCEDES<img src="mercedes/mercedeslogo.png"></h1>
-        <section id="mercedes">
-            <div id="box">
-                <h1 id="hp">MERCEDES AMT GT</h1>
-                <p><img src="mercedes/Amggt.jpg"></p>
-                92500$
-                <div id="utility" ><button type="button" onclick="buycar(92500,'MERCEDES AMT GT','mercedes/Amggt.jpg')">Buy</button></div>
-          </div>
-          <div id="box">
-              <h1 id="hn">MERCEDES C CLASS</h1>
-              <p><img src="mercedes/cclass.jpg"></p>
-              55400$
-              <div id="utility" ><button type="button" onclick="buycar(55400,'MERCEDES C CLASS','mercedes/cclass.jpg')">Buy</button></div>
-        </div>
-        <div id="box">
-          <h1 id="hs">MERCEDES GLA</h1>
-         <p> <img src="mercedes/gla.jpg"></p>
-         37500$
-          <div id="utility" ><button type="button" onclick="buycar(37500,'MERCEDES GLA','mercedes/gla.jpg')">Buy</button></div>
-        </div>
-        <div id="box">
-            <h1 id="hs">MERCEDES GLE</h1>
-           <p> <img src="mercedes/gle.jpg"></p>
-           55700$
-            <div id="utility" ><button type="button" onclick="buycar(55700,'MERCEDES GLE','mercedes/gle.jpg')">Buy</button></div>
-          </div>
-            
-        </section> -->
-    </div>
-    <div class="cas">
         <h1 id="h3">ROLLS ROYCE<img src="rollsroyce/rollslogo.png"></h1>
         <section id="rolls">
             <div id="box">
@@ -239,37 +209,9 @@
                             {alert("Not enough bank balance to buy this car. Reset your bank account and try again");}
                             
                         }
-                        window.addEventListener('scroll', reveal);
-
-function reveal(){
-
-var reveals = document.querySelectorAll('.cas');
-
-for (var i = 0; i < reveals.length; i++){
-
-var windowheight = window.innerHeight;
-
-var revealtop = reveals[i].getBoundingClientRect().top;
-
-var revealpoint = 10;
-
-if (revealtop < windowheight-revealpoint) {
-
-reveals[i].classList.add('active');
-
-}
-
-else{
-
-reveals[i].classList.remove('active');
-
-}
-
-}
-
-}
                         
 
                     </script>
     </body>
+
 </html>
