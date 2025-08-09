@@ -312,6 +312,28 @@ body::before {
 
 }
 
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
+
 body {
     margin: 0%;
     overflow-x: hidden;
@@ -322,8 +344,8 @@ body {
         width: 61vh;
         margin: 0%;
     }
-    #home1{
+
+    #home1 {
         height: 50vh;
     }
 }
-
