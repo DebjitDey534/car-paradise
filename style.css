@@ -319,8 +319,11 @@ body {
 
 @media screen and (max-width: 600px) {
     body {
-        width: 100vw;
         width: 61vh;
-        margin: 0%; 
+        margin: 0%;
+    }
+    #home1{
+        height: 50vh;
     }
 }
+
