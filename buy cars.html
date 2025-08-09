@@ -209,7 +209,30 @@
                             {alert("Not enough bank balance to buy this car. Reset your bank account and try again");}
                             
                         }
-                        
+                         window.addEventListener('scroll', reveal);
+
+             function reveal() {
+
+            var reveals = document.querySelectorAll('.cas');
+
+            for (var i = 0; i < reveals.length; i++) {
+
+                var windowheight = window.innerHeight;
+
+                var revealtop = reveals[i].getBoundingClientRect().top;
+
+                var revealpoint = 10;
+
+                if (revealtop < windowheight - revealpoint) {
+
+                    reveals[i].classList.add('active');
+
+                }
+
+
+            }
+
+        }
 
                     </script>
     </body>
