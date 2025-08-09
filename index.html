@@ -36,11 +36,11 @@
             </marquee>
 
         </section>
-        <div class="headings">
-            <h1 id="h2">Our Services</h1>
-        </div>
         <div class="services">
             <section id="ser">
+                <div class="headings">
+                    <h1 id="h2">Our Services</h1>
+                </div>
                 <div class="serve">
                     <div id="box">
                         <h1 id="hn">Buy new Car</h1>
@@ -60,12 +60,11 @@
                     </div>
             </section>
         </div>
-        <div class="headings">
-            <h1 id="ha">About us</h1>
-        </div>
         <div class="services">
             <section id="about">
-
+                <div class="headings">
+                    <h1 id="ha">About us</h1>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsum rerum consectetur voluptatem
                     modi odio architecto neque itaque, laborum cumque laboriosam deleniti asperiores. Ex soluta itaque
                     animi praesentium molestiae cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -94,12 +93,11 @@
                     reiciendis eligendi, vero officia. Sint fuga alias commodi sequi praesentium aspernatur?</p>
             </section>
         </div>
-        <div class="headings">
-            <h1 id="hc">Contact Us</h1>
-        </div>
         <div class="services">
             <section id="contact">
-
+                <div class="headings">
+                    <h1 id="hc">Contact Us</h1>
+                </div>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae magni qui unde nihil nostrum ut
                     commodi perspiciatis maiores cupiditate, blanditiis, quo sapiente illo necessitatibus maxime iste
                     labore inventore quisquam quasi!</p>
@@ -114,6 +112,9 @@
             </section>
         </div>
     </div>
+    <button id="backToTop" title="Go to top">↑</button>
+    <button id="backToTop" title="Go to top">↑</button>
+
 </body>
 <script>
     window.addEventListener('scroll', reveal);
@@ -163,7 +164,25 @@
         }
 
     }
-    
+    let backToTopBtn = document.getElementById("backToTop");
+
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+
+    backToTopBtn.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
 
 </script>
 
